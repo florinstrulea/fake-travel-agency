@@ -230,6 +230,32 @@ body {
   transition: all ease 0.5s;
 }
 
+.group {
+  position: relative;
+}
+.group__photo {
+  width: 50%;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.7);
+  border-radius: 2rem;
+  top: 0;
+  left: 0;
+}
+.group__photo--p1 {
+  left: 0;
+  top: -2rem;
+}
+.group__photo--p1:hover {
+  transform: scale(1.5);
+}
+.group__photo--p2 {
+  right: 0;
+  top: 2rem;
+}
+.group__photo--p3 {
+  left: 20%;
+  top: 20rem;
+}
+
 .header {
   height: 95vh;
   background-image: linear-gradient(110deg, rgba(0, 119, 182, 0.92) 35%, rgba(2, 3, 66, 0.8) 60%), url("../img/louvre-big.jpg");

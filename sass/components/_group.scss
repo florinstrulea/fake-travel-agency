@@ -1,4 +1,28 @@
+@use "../abstracts/mixins" as m;
 .group {
+	position: relative;
 	&__photo {
+		width: 50%;
+		@include m.box-shadow-default;
+		border-radius: 2rem;
+
+		top: 0;
+		left: 0;
+
+		&--p1 {
+			left: 0;
+			top: -2rem;
+			&:hover {
+				transform: scale(1.5);
+			}
+		}
+		&--p2 {
+			right: 0;
+			top: 2rem;
+		}
+		&--p3 {
+			left: 20%;
+			top: 20rem;
+		}
 	}
 }
