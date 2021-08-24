@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
 
 .btn {
 	&-container {
@@ -70,5 +71,9 @@
 		color: v.$color-white;
 		background-color: v.$color-primary;
 		transition: all ease-out 0.2s;
+		@include m.btn-text-action;
+	}
+	&:active {
+		@include m.btn-text-action;
 	}
 }

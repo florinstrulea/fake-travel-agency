@@ -220,6 +220,14 @@ body {
   color: #fff;
   background-color: #023e8a;
   transition: all ease-out 0.2s;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.7);
+  transform: translatey(-0.5rem);
+  transition: all ease 0.5s;
+}
+.btn-text:active {
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.7);
+  transform: translatey(-0.5rem);
+  transition: all ease 0.5s;
 }
 
 .header {
