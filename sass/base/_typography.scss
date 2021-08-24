@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as v;
+body {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	line-height: 1.7;
+	color: v.$color-grey-dark;
+	padding: 3rem;
+}
+
+.header-title {
+	color: v.$color-white;
+	text-transform: uppercase;
+	text-align: center;
+	backface-visibility: hidden;
+	&--span-1,
+	&--span-2 {
+		font-family: "Dancing Script", "cursive";
+		font-weight: 700;
+		font-size: 14rem;
+		text-transform: capitalize;
+		letter-spacing: 2rem;
+		display: inline-block;
+	}
+	&--escapade {
+		display: block;
+		font-size: 3rem;
+		letter-spacing: 0.4rem;
+		animation-name: myAnimationScale;
+		animation-duration: 0.3s;
+		animation-delay: 0.5s;
+	}
+	&--span-1 {
+		animation-name: myAnimationLeft;
+		animation-duration: 0.5s;
+		animation-timing-function: ease-out;
+	}
+
+	&--span-2 {
+		animation-name: myAnimationRight;
+		animation-duration: 0.5s;
+		animation-timing-function: ease-out;
+	}
+}
+
+.heading-secondary {
+	text-transform: uppercase;
+	font-size: 4.5rem;
+	font-weight: bolder;
+	background-image: linear-gradient(to right, v.$color-primary-light, v.$color-primary-dark);
+	display: inline-block;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	letter-spacing: 0.2rem;
+	text-shadow: v.$color-primary-dark;
+	transition: all ease-in 0.2s;
+	&:hover {
+		transform: skewY(-2deg) scale(1.1) rotateX(30deg);
+		text-shadow: 0.5rem 0.5rem 3rem v.$color-grey-dark;
+	}
+}

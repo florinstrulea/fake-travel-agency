@@ -1,0 +1,7 @@
+@use "../abstracts/mixins" as m;
+.u-text-center {
+	@include m.text-center;
+}
+.u-margin-bottom-5 {
+	margin-bottom: 5rem;
+}

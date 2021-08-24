@@ -1,0 +1,8 @@
+@use "../abstracts/variables" as v;
+.about-us {
+	background-color: v.$color-grey-light-first;
+	padding: 60rem 0;
+	margin-top: -40vh;
+}
+
+// ;

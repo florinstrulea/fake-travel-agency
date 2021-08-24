@@ -1,0 +1,57 @@
+@use "../abstracts/variables" as v;
+
+.btn {
+	&-container {
+		position: absolute;
+		bottom: 10%;
+		right: 5%;
+	}
+
+	&:link,
+	&:visited {
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 1rem 2rem;
+		border-radius: 5rem;
+		display: inline-block;
+		transition: 0.5s ease-out;
+		position: relative;
+	}
+	&:hover {
+		transform: translateY(-4px);
+		box-shadow: 0px 20px 30px rgba(v.$color-black, 0.8);
+		&::after {
+			transform: scaley(1.2) scalex(1.1);
+			opacity: 0;
+		}
+	}
+	&:active {
+		transform: translateY(2px);
+		box-shadow: 0 10px 20px rgba(v.$color-black, 0.8);
+	}
+	&--white {
+		background-color: v.$color-white;
+		color: v.$color-grey-dark;
+		font-size: 2rem;
+		&::after {
+			background-color: v.$color-white;
+		}
+	}
+	&::after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		border-radius: 5rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transition: 0.8s ease-out;
+	}
+
+	&--header {
+		animation: myAnimationBottom 0.5s ease-out 0.8s;
+		animation-fill-mode: backwards;
+	}
+}
