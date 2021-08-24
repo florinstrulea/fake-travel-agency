@@ -1,7 +1,13 @@
 @use "../abstracts/mixins" as m;
 .u-text-center {
-	@include m.text-center;
+	@include m.flex-center;
 }
-.u-margin-bottom-5 {
+.u-margin-bottom-big {
+	margin-bottom: 8rem;
+}
+.u-margin-bottom-medium {
 	margin-bottom: 5rem;
+}
+.u-margin-bottom-small {
+	margin-bottom: 2rem;
 }

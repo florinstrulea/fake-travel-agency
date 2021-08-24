@@ -32,7 +32,7 @@
 	&--white {
 		background-color: v.$color-white;
 		color: v.$color-grey-dark;
-		font-size: 2rem;
+		font-size: v.$font-size-default;
 		&::after {
 			background-color: v.$color-white;
 		}
@@ -53,5 +53,22 @@
 	&--header {
 		animation: myAnimationBottom 0.5s ease-out 0.8s;
 		animation-fill-mode: backwards;
+	}
+}
+
+.btn-text {
+	&:link,
+	&:visited {
+		text-decoration: none;
+		border-bottom: 2px solid v.$color-primary-light;
+		letter-spacing: 0.2rem;
+		display: inline-block;
+		padding-bottom: 0.5rem;
+		font-size: v.$font-size-default;
+	}
+	&:hover {
+		color: v.$color-white;
+		background-color: v.$color-primary;
+		transition: all ease-out 0.2s;
 	}
 }

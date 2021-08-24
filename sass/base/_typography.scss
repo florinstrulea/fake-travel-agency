@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
 body {
 	font-family: "Lato", sans-serif;
 	font-weight: 400;
@@ -44,7 +45,7 @@ body {
 
 .heading-secondary {
 	text-transform: uppercase;
-	font-size: 4.5rem;
+	font-size: 4rem;
 	font-weight: bolder;
 	background-image: linear-gradient(to right, v.$color-primary-light, v.$color-primary-dark);
 	display: inline-block;
@@ -57,5 +58,20 @@ body {
 	&:hover {
 		transform: skewY(-2deg) scale(1.1) rotateX(30deg);
 		text-shadow: 0.5rem 0.5rem 3rem v.$color-grey-dark;
+	}
+}
+
+.heading-tertiary {
+	text-transform: uppercase;
+	font-size: v.$font-size-default;
+	letter-spacing: 0.2rem;
+	font-weight: 700;
+	@include m.flex-center;
+}
+
+.paragraph {
+	font-size: v.$font-size-default;
+	&:not(:last-child) {
+		margin-bottom: 3.5rem;
 	}
 }
