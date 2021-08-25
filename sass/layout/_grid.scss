@@ -1,0 +1,12 @@
+.about-us__container {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 20rem;
+	&--photo {
+		flex-basis: 50%;
+		text-align: end;
+	}
+	&--text {
+		flex-basis: 49%;
+	}
+}

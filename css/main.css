@@ -120,7 +120,7 @@ body {
   transition: all ease-in 0.2s;
 }
 .heading-secondary:hover {
-  transform: skewY(-2deg) scale(1.1) rotateX(30deg);
+  transform: scale(1.1) rotateX(15deg);
   text-shadow: 0.5rem 0.5rem 3rem #777;
 }
 
@@ -129,8 +129,7 @@ body {
   font-size: 2rem;
   letter-spacing: 0.2rem;
   font-weight: 700;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .paragraph {
@@ -219,41 +218,28 @@ body {
 .btn-text:hover {
   color: #fff;
   background-color: #023e8a;
-  transition: all ease-out 0.2s;
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.7);
-  transform: translatey(-0.5rem);
+  transform: translateY(-0.5rem);
   transition: all ease 0.5s;
 }
 .btn-text:active {
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.7);
-  transform: translatey(-0.5rem);
+  transform: translateY(0.5rem);
   transition: all ease 0.5s;
 }
 
-.group {
-  position: relative;
-}
 .group__photo {
-  width: 50%;
+  width: 48%;
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.7);
-  border-radius: 2rem;
-  top: 0;
-  left: 0;
+  border-radius: 5rem;
+  margin-bottom: 5rem;
 }
-.group__photo--p1 {
-  left: 0;
-  top: -2rem;
+.group__photo:nth-of-type(2n + 1) {
+  margin-right: 2rem;
 }
-.group__photo--p1:hover {
-  transform: scale(1.5);
-}
-.group__photo--p2 {
-  right: 0;
-  top: 2rem;
-}
-.group__photo--p3 {
-  left: 20%;
-  top: 20rem;
+.group__photo:hover {
+  transform: scale(1.2);
+  border-radius: 0;
 }
 
 .header {
@@ -279,6 +265,19 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.about-us__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20rem;
+}
+.about-us__container--photo {
+  flex-basis: 50%;
+  text-align: end;
+}
+.about-us__container--text {
+  flex-basis: 49%;
 }
 
 .about-us {
