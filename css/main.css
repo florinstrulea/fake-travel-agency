@@ -70,7 +70,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
+  padding: 0 8rem;
 }
 
 .header-title {
@@ -126,17 +126,24 @@ body {
 
 .heading-tertiary {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.8rem;
   letter-spacing: 0.2rem;
   font-weight: 700;
   text-align: center;
 }
 
 .paragraph {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .paragraph:not(:last-child) {
   margin-bottom: 3.5rem;
+}
+
+.far,
+.fas {
+  color: #0077b6;
+  font-size: 10rem;
+  margin-bottom: 1rem;
 }
 
 .u-text-center {
@@ -154,6 +161,10 @@ body {
 
 .u-margin-bottom-small {
   margin-bottom: 2rem;
+}
+
+.u-margin-side-default {
+  margin: 0 20rem;
 }
 
 .btn-container {
@@ -185,7 +196,7 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .btn--white::after {
   background-color: #fff;
@@ -213,7 +224,7 @@ body {
   letter-spacing: 0.2rem;
   display: inline-block;
   padding-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .btn-text:hover {
   color: #fff;
@@ -233,7 +244,7 @@ body {
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.7);
   border-radius: 5rem;
   margin-bottom: 5rem;
-  filter: blur(2px);
+  /* filter: blur(2px); */
   z-index: 0;
 }
 .group__photo:hover {
@@ -274,20 +285,51 @@ body {
 .about-us__container {
   display: flex;
   justify-content: space-between;
-  margin: 0 20rem;
 }
 .about-us__container--photo {
   flex-basis: 50%;
   text-align: end;
 }
 .about-us__container--text {
-  flex-basis: 49%;
+  flex-basis: 48%;
+  margin-right: 4rem;
+  text-align: justify;
+}
+
+.benefits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+.cards__card {
+  padding: 4rem 2rem;
+  background-color: #f7f7f7;
+  width: 21%;
+  text-align: center;
+}
+.cards__card:hover {
+  transform: scale(1.05) translatey(5rem);
 }
 
 .about-us {
   background-color: #f7f7f7;
   padding: 60rem 0;
   margin-top: -50vh;
+}
+
+.benefits {
+  height: 95vh;
+  background: url("../../img/bucarest.jpg");
+  background-size: cover;
+  background-position: bottom;
+  max-width: 100%;
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  margin-top: -60vh;
 }
 
 /*# sourceMappingURL=main.css.map */

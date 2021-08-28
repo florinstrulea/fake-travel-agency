@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as v;
+.about-us {
+	background-color: v.$color-grey-light-first;
+	padding: 60rem 0;
+	margin-top: -50vh;
+}
+.benefits {
+	height: 95vh;
+	background: url("../../img/bucarest.jpg");
+	background-size: cover;
+	background-position: bottom;
+	max-width: 100%;
+	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+	margin-top: -60vh;
+}

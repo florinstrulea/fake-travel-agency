@@ -5,7 +5,7 @@ body {
 	font-weight: 400;
 	line-height: 1.7;
 	color: v.$color-grey-dark;
-	padding: 3rem;
+	padding: 0 8rem;
 }
 
 .header-title {
@@ -74,4 +74,11 @@ body {
 	&:not(:last-child) {
 		margin-bottom: 3.5rem;
 	}
+}
+
+.far,
+.fas {
+	color: v.$color-primary-light;
+	font-size: 10rem;
+	margin-bottom: 1rem;
 }

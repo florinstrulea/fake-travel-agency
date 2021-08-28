@@ -1,12 +1,36 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
 .about-us__container {
 	display: flex;
 	justify-content: space-between;
-	margin: 0 20rem;
+
 	&--photo {
 		flex-basis: 50%;
 		text-align: end;
 	}
 	&--text {
-		flex-basis: 49%;
+		flex-basis: 48%;
+		margin-right: 4rem;
+		text-align: justify;
+	}
+}
+.benefits {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cards {
+	display: flex;
+	justify-content: space-between;
+
+	&__card {
+		padding: 4rem 2rem;
+		background-color: v.$color-grey-light-first;
+		width: 21%;
+		text-align: center;
+		&:hover {
+			transform: scale(1.05) translatey(5rem);
+		}
 	}
 }

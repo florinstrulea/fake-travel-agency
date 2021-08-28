@@ -6,7 +6,7 @@
 		@include m.box-shadow-default;
 		border-radius: 5rem;
 		margin-bottom: 5rem;
-		filter: blur(2px);
+		/* filter: blur(2px); */
 		z-index: 0;
 		&:hover {
 			transform: scale(2);
