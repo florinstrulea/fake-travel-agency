@@ -1,5 +1,5 @@
 @use "../abstracts/variables" as v;
-.about-us {
+.inspiration {
 	background-color: v.$color-grey-light-first;
 	padding: 60rem 0;
 	margin-top: -50vh;
@@ -12,4 +12,10 @@
 	max-width: 100%;
 	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
 	margin-top: -60vh;
+}
+.section-packages {
+	background-color: v.$color-grey-light-first;
+	margin-top: -10vh;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
 }

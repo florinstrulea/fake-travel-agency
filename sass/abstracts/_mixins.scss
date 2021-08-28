@@ -2,6 +2,13 @@
 @mixin flex-center() {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+}
+@mixin flex-center-column() {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 @mixin box-shadow-default {
 	box-shadow: 0 1.5rem 2rem rgba(v.$color-black, 0.7);

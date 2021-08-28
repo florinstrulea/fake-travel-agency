@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as v;
+
+.cards__card {
+	padding: 4rem 2rem;
+	background-color: v.$color-grey-light-first;
+	width: 21%;
+	text-align: center;
+	&:hover {
+		transform: scale(1.05) translatex(2rem);
+	}
+}

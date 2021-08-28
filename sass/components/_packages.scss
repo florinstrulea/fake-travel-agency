@@ -1,0 +1,100 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.packages {
+	display: flex;
+	justify-content: space-between;
+
+	&__package {
+		width: 31%;
+		border-radius: 2rem 2rem 0 0;
+		height: 70rem;
+		perspective: 150rem;
+		position: relative;
+
+		&--div {
+			background-color: rgba(v.$color-primary-light, 0.15);
+			border-radius: 2rem 2rem 0 0;
+			margin: 3rem 0;
+			& .paragraph {
+				text-align: center;
+				font-weight: bold;
+				padding: 2rem;
+				font-size: 2rem;
+				color: v.$color-primary-dark;
+			}
+		}
+		&--figure img {
+			width: 100%;
+			background-size: cover;
+			border-radius: 2rem 2rem 0 0;
+		}
+		&--figure {
+			position: relative;
+		}
+		&--figure figcaption {
+			position: absolute;
+			bottom: 1rem;
+			left: 1rem;
+			font-size: 3.5rem;
+			background-color: v.$color-white;
+			opacity: 0.85;
+			padding: 0.5rem;
+			color: v.$color-primary-dark;
+		}
+		&-front {
+			background-color: v.$color-white;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 70rem;
+			width: 100%;
+			border-radius: 2rem 2rem 0 0;
+			transform: rotateY(0);
+			transition: all ease-out 1s;
+			backface-visibility: hidden;
+		}
+		&-back {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 70rem;
+			width: 100%;
+			border-radius: 2rem 2rem 0 0;
+			transform: rotateY(180deg);
+			transition: all ease-out 1s;
+			backface-visibility: hidden;
+			@include m.flex-center-column;
+			&--price {
+				font-size: 10rem;
+				font-weight: 200;
+				color: v.$color-primary-dark;
+				margin: 10rem 0;
+			}
+			&--only {
+				font-size: 2rem;
+				color: v.$color-grey-dark;
+			}
+			&--first {
+				background-color: rgba(v.$color-secondary, 0.4);
+			}
+			&--second {
+				background-color: rgba(v.$color-tertiary, 0.4);
+			}
+			&--third {
+				background-color: rgba(v.$color-quarternary, 0.4);
+			}
+		}
+
+		&:hover &-front {
+			transform: rotateY(-180deg);
+
+			transition: all ease-out 1s;
+		}
+		&:hover &-back {
+			transform: rotateY(0);
+
+			transition: all ease-out 1s;
+		}
+	}
+}

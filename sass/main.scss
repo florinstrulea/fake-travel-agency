@@ -3,13 +3,16 @@
 @use "../sass/abstracts/variables" as v;
 
 @use "../sass/base/animations" as a;
-@use "../sass/base/base" as ba;
-@use "../sass/base/typography" as t;
-@use "../sass/base/utilities" as u;
+@use "../sass/base/base";
+@use "../sass/base/typography";
+@use "../sass/base/utilities";
 
-@use "../sass/components/button" as bt;
-@use "../sass/components/group" as g;
-@use "../sass/layout/header" as he;
-@use "../sass/layout/grid" as gr;
-@use "../sass/layout/sections" as s;
-@use "../sass/pages/home" as ho;
+@use "../sass/components/button";
+@use "../sass/components/cards";
+@use "../sass/components/group";
+@use "../sass/components/packages";
+
+@use "../sass/layout/header";
+@use "../sass/layout/grid";
+@use "../sass/layout/sections";
+@use "../sass/pages/home";

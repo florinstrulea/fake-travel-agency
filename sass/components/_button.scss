@@ -12,7 +12,7 @@
 	&:visited {
 		text-decoration: none;
 		text-transform: uppercase;
-		padding: 1rem 2rem;
+		padding: 1.5rem 2rem;
 		border-radius: 5rem;
 		display: inline-block;
 		transition: 0.5s ease-out;
@@ -33,7 +33,7 @@
 	&--white {
 		background-color: v.$color-white;
 		color: v.$color-grey-dark;
-		font-size: v.$font-size-default;
+		font-size: 2.5rem;
 		&::after {
 			background-color: v.$color-white;
 		}
@@ -65,6 +65,27 @@
 		letter-spacing: 0.2rem;
 		display: inline-block;
 		padding-bottom: 0.5rem;
+		font-size: v.$font-size-default;
+	}
+	&:hover {
+		color: v.$color-white;
+		background-color: v.$color-primary;
+		@include m.btn-text-action-up;
+	}
+	&:active {
+		@include m.btn-text-action-down;
+	}
+}
+
+.btn-blue {
+	&:link,
+	&:visited {
+		text-decoration: none;
+		border: 2px solid v.$color-primary-light;
+		letter-spacing: 0.3rem;
+		display: inline-block;
+		padding: 2rem 3rem;
+		color: v.$color-primary-light;
 		font-size: v.$font-size-default;
 	}
 	&:hover {

@@ -1,6 +1,5 @@
-@use "../abstracts/mixins" as m;
 @use "../abstracts/variables" as v;
-.about-us__container {
+.inspiration__container {
 	display: flex;
 	justify-content: space-between;
 
@@ -23,14 +22,4 @@
 .cards {
 	display: flex;
 	justify-content: space-between;
-
-	&__card {
-		padding: 4rem 2rem;
-		background-color: v.$color-grey-light-first;
-		width: 21%;
-		text-align: center;
-		&:hover {
-			transform: scale(1.05) translatey(5rem);
-		}
-	}
 }
