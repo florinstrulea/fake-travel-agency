@@ -10,6 +10,11 @@
 	justify-content: center;
 	align-items: center;
 }
+@mixin flex-space-between() {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 @mixin box-shadow-default {
 	box-shadow: 0 1.5rem 2rem rgba(v.$color-black, 0.7);
 }
@@ -23,4 +28,8 @@
 	@include box-shadow-default;
 	transform: translateY(0.5rem);
 	transition: all ease 0.5s;
+}
+@mixin padding-vertical {
+	padding-top: 10rem;
+	padding-bottom: 10rem;
 }

@@ -402,12 +402,43 @@ body {
   transition: all ease-out 1s;
 }
 
+.review {
+  width: 48%;
+  clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.review figure {
+  width: 50%;
+}
+.review figure img {
+  width: 50%;
+  border-radius: 2rem;
+  margin-left: 2rem;
+}
+.review__text {
+  margin-left: -10rem;
+  margin-right: 2rem;
+  width: 100%;
+  text-align: justify;
+}
+
+video {
+  width: 100%;
+  background-size: cover;
+}
+
 .header {
   height: 95vh;
   background-image: linear-gradient(110deg, rgba(0, 119, 182, 0.92) 35%, rgba(2, 3, 66, 0.8) 60%), url("../img/louvre-big.jpg");
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0% 0%, 100% 0, 100% 100%, 30% 100%, 0 58%);
   position: relative;
 }
 .header__logo-container {
@@ -452,10 +483,17 @@ body {
   justify-content: space-between;
 }
 
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+}
+
 .inspiration {
   background-color: #f7f7f7;
-  padding: 60rem 0;
-  margin-top: -50vh;
+  padding-top: 5rem;
+  padding-bottom: 20rem;
 }
 
 .benefits {
@@ -465,7 +503,7 @@ body {
   background-position: bottom;
   max-width: 100%;
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
-  margin-top: -60vh;
+  margin-top: -10vh;
 }
 
 .section-packages {
@@ -473,6 +511,22 @@ body {
   margin-top: -10vh;
   padding-top: 10rem;
   padding-bottom: 10rem;
+  padding-bottom: 10rem;
+}
+
+.section-reviews {
+  position: relative;
+}
+
+.overlap {
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 55%, rgba(2, 167, 255, 0.5) 65%);
+}
+.overlap h2 {
+  padding: 5rem 0;
 }
 
 /*# sourceMappingURL=main.css.map */

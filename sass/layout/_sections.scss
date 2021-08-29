@@ -1,8 +1,10 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
 .inspiration {
 	background-color: v.$color-grey-light-first;
-	padding: 60rem 0;
-	margin-top: -50vh;
+	padding-top: 5rem;
+	padding-bottom: 20rem;
 }
 .benefits {
 	height: 95vh;
@@ -11,11 +13,28 @@
 	background-position: bottom;
 	max-width: 100%;
 	clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
-	margin-top: -60vh;
+	margin-top: -10vh;
 }
 .section-packages {
 	background-color: v.$color-grey-light-first;
 	margin-top: -10vh;
-	padding-top: 10rem;
+	@include m.padding-vertical;
 	padding-bottom: 10rem;
+}
+.section-reviews {
+	position: relative;
+}
+.overlap {
+	align-items: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background: linear-gradient(
+		to bottom,
+		rgba(v.$color-white, 0.8) 55%,
+		rgba(v.$color-primary-lighter, 0.5) 65%
+	);
+	& h2 {
+		padding: 5rem 0;
+	}
 }
