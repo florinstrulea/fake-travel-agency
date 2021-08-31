@@ -5,7 +5,6 @@ body {
 	font-weight: 400;
 	line-height: 1.7;
 	color: v.$color-grey-dark;
-	padding: 0 8rem;
 }
 
 .header-title {
@@ -72,7 +71,7 @@ body {
 .paragraph {
 	font-size: v.$font-size-default;
 	&:not(:last-child) {
-		margin-bottom: 3.5rem;
+		margin-bottom: 2.5rem;
 	}
 }
 

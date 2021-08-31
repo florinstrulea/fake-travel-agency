@@ -64,13 +64,19 @@
 							une semaine complète? Essayez une nouvelle arome de « gelato » à Rome chaque soir.
 							C’est une bonne idée n’est pas ?
 						</p>
-						<a href="" class="btn-text">En savoir plus &#8594;</a>
+						<div><a href="" class="btn-text">En savoir plus &#8594;</a></div>
 					</div>
 					<div class="inspiration__container--photo">
-						<div class="group">
+						<div>
 							<img class="group__photo group__photo--p1" src="img/bordeaux.jpg" alt="Photo 1" />
+						</div>
+						<div>
 							<img class="group__photo group__photo--p2" src="img/rome.jpg" alt="Photo 2" />
+						</div>
+						<div>
 							<img class="group__photo group__photo--p3" src="img/athens.jpg" alt="Photo 3" />
+						</div>
+						<div>
 							<img class="group__photo group__photo--p4" src="img/sevilla.jpg" alt="Photo 4" />
 						</div>
 					</div>
@@ -278,7 +284,56 @@
 					</div>
 				</div>
 			</section>
+			<section class="section-booking">
+				<div class="form-group u-margin-side-default">
+					<div class="form-group__container" id="container">
+						<div class="form-container sign-up-container first" id="signup-form">
+							<form action="#" method="post">
+								<h2 class="u-text-uppercase">Nouveau client ?</h2>
+								<span>connectez vous avec:</span>
+								<div class="social-container">
+									<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+									<a href="#" class="social"><i class="fab fa-google"></i></a>
+									<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+								</div>
+								<span>ou utiliser une adresse mail</span>
+								<input type="text" placeholder="Nom" />
+								<input type="text" placeholder="Prénom" />
+								<input type="email" placeholder="Email" />
+								<input type="password" placeholder="Mot de Passe" />
+								<input type="submit" value="Inscrivez-vous" class="btn btn--white btn-form" />
+							</form>
+						</div>
+						<div class="form-container sign-in-container second" id="sigin-form">
+							<form action="#" method="#get">
+								<h2 class="u-text-uppercase">Client déjà ?</h2>
+								<span>connectez vous avec:</span>
+								<div class="social-container">
+									<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+									<a href="#" class="social"><i class="fab fa-google"></i></a>
+									<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+								</div>
+								<span>ou utiliser votre compte</span>
+								<input type="email" placeholder="Email" />
+								<input type="password" placeholder="Mot de passe" />
+								<a href="#">Mot de passe oublié?</a>
+								<input type="submit" value="Se connecter" class="btn btn-blue btn-form" />
+							</form>
+						</div>
+					</div>
+					<!-- <div class="description-container">
+						<div class="">
+							<h2 class="u-text-uppercase">Bonjour !</h2>
+							<p>Remplissez le formulaire et commencez le voyage avec nous</p>
+							<a href="#signup-form" class="btn btn--white" id="signup">Inscrivez-vous</a>
+							<p>Utilisez votre compte pour vous connecter</p>
+							<a href="#singin-form" class="btn btn--white" id="signin">Se connecter</a>
+						</div>
+					</div> -->
+				</div>
+			</section>
 		</main>
+		<script src="js/main.js"></script>
 	</body>
 </html>
 

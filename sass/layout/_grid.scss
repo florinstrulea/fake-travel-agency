@@ -6,19 +6,24 @@
 	justify-content: space-between;
 
 	&--photo {
-		flex-basis: 50%;
-		text-align: end;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		flex-basis: 48%;
+		& div {
+			flex-basis: 48%;
+		}
 	}
 	&--text {
+		display: flex;
+		flex-direction: column;
 		flex-basis: 48%;
-		margin-right: 4rem;
 		text-align: justify;
 	}
 }
 .benefits {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	@include m.flex-center;
 }
 
 .cards {
@@ -30,4 +35,7 @@
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-items: space-evenly;
+}
+.form-group {
+	@include m.flex-center;
 }
