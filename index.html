@@ -23,7 +23,7 @@
 	<body>
 		<header class="header">
 			<div class="header__logo-container">
-				<img class="header__logo" src="img/logo-white.jpg" alt="Logo" />
+				<img class="header__logo" src="img/logo.png" alt="Logo" />
 			</div>
 			<div class="header__text-container">
 				<h1 class="header-title">
@@ -67,16 +67,16 @@
 						<div><a href="" class="btn-text">En savoir plus &#8594;</a></div>
 					</div>
 					<div class="inspiration__container--photo">
-						<div>
+						<div class="inspiration__container--div">
 							<img class="group__photo group__photo--p1" src="img/bordeaux.jpg" alt="Photo 1" />
 						</div>
-						<div>
+						<div class="inspiration__container--div">
 							<img class="group__photo group__photo--p2" src="img/rome.jpg" alt="Photo 2" />
 						</div>
-						<div>
+						<div class="inspiration__container--div">
 							<img class="group__photo group__photo--p3" src="img/athens.jpg" alt="Photo 3" />
 						</div>
-						<div>
+						<div class="inspiration__container--div">
 							<img class="group__photo group__photo--p4" src="img/sevilla.jpg" alt="Photo 4" />
 						</div>
 					</div>
@@ -223,9 +223,7 @@
 						<div class="review">
 							<figure class="review__img"><img src="img/woman1_small.jpg" alt="" /></figure>
 							<div class="review__text">
-								<h3 class="heading-tertiary u-margin-bottom-small">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								</h3>
+								<h3 class="heading-tertiary u-margin-bottom-small">Lorem ipsum dolor sit amet</h3>
 								<p class="paragraph">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio dicta,
 									perspiciatis aut dignissimos itaque deleniti, voluptatum deserunt odio molestiae
@@ -237,9 +235,7 @@
 						<div class="review">
 							<figure class="review__img"><img src="img/man1_small.jpg" alt="" /></figure>
 							<div class="review__text">
-								<h3 class="heading-tertiary u-margin-bottom-small">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								</h3>
+								<h3 class="heading-tertiary u-margin-bottom-small">Lorem ipsum dolor sit elit.</h3>
 								<p class="paragraph">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio dicta,
 									perspiciatis aut dignissimos itaque deleniti, voluptatum deserunt odio molestiae
@@ -251,9 +247,7 @@
 						<div class="review">
 							<figure class="review__img"><img src="img/woman2_small.jpg" alt="" /></figure>
 							<div class="review__text">
-								<h3 class="heading-tertiary u-margin-bottom-small">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								</h3>
+								<h3 class="heading-tertiary u-margin-bottom-small">Lorem ipsum dolor sit amet</h3>
 								<p class="paragraph">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio dicta,
 									perspiciatis aut dignissimos itaque deleniti, voluptatum deserunt odio molestiae
@@ -265,9 +259,7 @@
 						<div class="review">
 							<figure class="review__img"><img src="img/man2_small.jpg" alt="" /></figure>
 							<div class="review__text">
-								<h3 class="heading-tertiary u-margin-bottom-small">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								</h3>
+								<h3 class="heading-tertiary u-margin-bottom-small">Lorem ipsum dolor sit amet</h3>
 								<p class="paragraph">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio dicta,
 									perspiciatis aut dignissimos itaque deleniti, voluptatum deserunt odio molestiae
@@ -276,21 +268,20 @@
 								<p class="paragraph">Christophe, 32ans</p>
 							</div>
 						</div>
-						<div class="u-text-center">
-							<a href="#" class="btn btn--white u-margin-top-big u-text-uppercase"
-								>Decouvrez plus !</a
-							>
-						</div>
+					</div>
+					<div class="u-text-center">
+						<a href="#" class="btn btn-blue u-margin-top-big u-text-uppercase">Decouvrez plus !</a>
 					</div>
 				</div>
 			</section>
 			<section class="section-booking">
-				<div class="form-group u-margin-side-default">
+				<div><h2 class="heading-secondary u-margin-bottom-big">Reservez aujourd'hui</h2></div>
+				<div class="form-group">
 					<div class="form-group__container" id="container">
 						<div class="form-container sign-up-container first" id="signup-form">
 							<form action="#" method="post">
-								<h2 class="u-text-uppercase">Nouveau client ?</h2>
-								<span>connectez vous avec:</span>
+								<h2 class="heading-tertiary">Nouveau client ?</h2>
+								<span>connectez-vous avec:</span>
 								<div class="social-container">
 									<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
 									<a href="#" class="social"><i class="fab fa-google"></i></a>
@@ -301,13 +292,13 @@
 								<input type="text" placeholder="Prénom" />
 								<input type="email" placeholder="Email" />
 								<input type="password" placeholder="Mot de Passe" />
-								<input type="submit" value="Inscrivez-vous" class="btn btn--white btn-form" />
+								<input type="submit" value="Inscrivez-vous" class="btn btn--white" />
 							</form>
 						</div>
 						<div class="form-container sign-in-container second" id="sigin-form">
 							<form action="#" method="#get">
-								<h2 class="u-text-uppercase">Client déjà ?</h2>
-								<span>connectez vous avec:</span>
+								<h2 class="heading-tertiary">Client déjà ?</h2>
+								<span>connectez-vous avec:</span>
 								<div class="social-container">
 									<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
 									<a href="#" class="social"><i class="fab fa-google"></i></a>
@@ -317,24 +308,49 @@
 								<input type="email" placeholder="Email" />
 								<input type="password" placeholder="Mot de passe" />
 								<a href="#">Mot de passe oublié?</a>
-								<input type="submit" value="Se connecter" class="btn btn-blue btn-form" />
+								<input type="submit" value="Se connecter" class="btn btn-blue" />
 							</form>
 						</div>
 					</div>
-					<!-- <div class="description-container">
-						<div class="">
-							<h2 class="u-text-uppercase">Bonjour !</h2>
-							<p>Remplissez le formulaire et commencez le voyage avec nous</p>
-							<a href="#signup-form" class="btn btn--white" id="signup">Inscrivez-vous</a>
-							<p>Utilisez votre compte pour vous connecter</p>
-							<a href="#singin-form" class="btn btn--white" id="signin">Se connecter</a>
-						</div>
-					</div> -->
 				</div>
 			</section>
 		</main>
+		<footer>
+			<div class="logo-footer u-margin-top-big u-margin-bottom-big">
+				<a href="#"><img src="img/Logo.png" alt="" /></a>
+			</div>
+			<div class="footer-elements">
+				<div class="footer-element">
+					<ul>
+						<a href="#"><li class="uppercase li-footer">home</li></a>
+						<a href="#"><li class="uppercase li-footer">reservation</li></a>
+					</ul>
+				</div>
+				<div class="footer-element">
+					<ul>
+						<a href="#"><li class="uppercase li-footer">faq</li></a>
+						<a href="#"><li class="uppercase li-footer">mentions legalés</li></a>
+						<a href="#"><li class="uppercase li-footer">politique de confidentialité</li></a>
+						<a href="#"><li class="uppercase li-footer">politique de cookies</li></a>
+					</ul>
+				</div>
+				<div class="footer-social">
+					<p class="u-text-uppercase">Retrouvez nous sur:</p>
+					<div class="social-container">
+						<a href="#"
+							><span class="social-icon"><i class="fab fa-facebook-f"></i></span
+						></a>
+						<a href="#"
+							><span class="social-icon"><i class="fab fa-twitter"></i></span
+						></a>
+						<a href="#"
+							><span class="social-icon"><i class="fab fa-instagram"></i></span
+						></a>
+					</div>
+				</div>
+			</div>
+			<div><p class="uppercase last-paragraph">&copy; 2021 CTB Tours</p></div>
+		</footer>
 		<script src="js/main.js"></script>
 	</body>
 </html>
-
-<!-- <a class="header-button" href="#section-offers">Découvrez nos offres</a> -->

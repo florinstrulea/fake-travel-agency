@@ -1,4 +1,9 @@
 @use "../abstracts/variables" as v;
+@mixin logo {
+	border-radius: 2rem;
+	background-color: rgba(v.$color-white, 0.7);
+	color: white;
+}
 @mixin flex-center() {
 	display: flex;
 	justify-content: center;
@@ -32,4 +37,21 @@
 @mixin padding-vertical {
 	padding-top: 10rem;
 	padding-bottom: 10rem;
+}
+@mixin social {
+	border: 1px solid #dddddd;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 1rem;
+	height: 4rem;
+	width: 4rem;
+	background-color: v.$color-primary-light;
+	color: v.$color-white;
+}
+
+@mixin center-block {
+	display: block;
+	margin: 0 auto;
 }

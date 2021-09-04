@@ -35,6 +35,7 @@
 		color: v.$color-grey-dark;
 		font-size: 1.5rem;
 		font-weight: bold;
+		text-align: center;
 		&::after {
 			background-color: v.$color-white;
 		}
@@ -99,13 +100,5 @@
 	}
 	&:active {
 		@include m.btn-text-action-down;
-	}
-	&__secondary {
-		&:link,
-		&:visited,
-		&:active {
-			background-color: v.$color-primary-light;
-			color: v.$color-white;
-		}
 	}
 }

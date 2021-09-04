@@ -25,6 +25,9 @@
 	position: relative;
 }
 .overlap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 	position: absolute;
 	top: 0;
@@ -32,13 +35,14 @@
 	background: linear-gradient(
 		to bottom,
 		rgba(v.$color-white, 0.8) 55%,
-		rgba(v.$color-primary-lighter, 0.5) 65%
+		rgba(v.$color-grey-light-first, 0.85) 65%
 	);
 	& h2 {
 		padding: 5rem 0;
 	}
 }
 .section-booking {
-	background-color: v.$color-grey-light-first;
+	background: v.$color-primary-light;
+	background: linear-gradient(5deg, v.$color-primary-light 3%, v.$color-grey-light-first 24%);
 	@include m.padding-vertical;
 }

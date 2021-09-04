@@ -5,25 +5,44 @@ body {
 	font-weight: 400;
 	line-height: 1.7;
 	color: v.$color-grey-dark;
+	box-shadow: 0 1rem 1rem black;
 }
+// @media screen and (min-width: 600px) {
+// 	html {
+// 		zoom: 0.8;
+// 	}
+// }
+
+// @media screen and (min-width: 800px) {
+// 	html {
+// 		zoom: 0.9;
+// 	}
+// }
+
+// @media only screen and (min-width: 1000px) {
+// 	html {
+// 		zoom: 1;
+// 	}
+// }
 
 .header-title {
 	color: v.$color-white;
 	text-transform: uppercase;
 	text-align: center;
-	backface-visibility: hidden;
+
+	// backface-visibility: hidden;
 	&--span-1,
 	&--span-2 {
 		font-family: "Dancing Script", "cursive";
 		font-weight: 700;
-		font-size: 14rem;
+		font-size: clamp(6rem, 4.3846rem + 4.4872vw, 13rem);
 		text-transform: capitalize;
 		letter-spacing: 2rem;
 		display: inline-block;
 	}
 	&--escapade {
 		display: block;
-		font-size: 3rem;
+		font-size: clamp(3rem, 1.3077rem + 1.9231vw, 3rem);
 		letter-spacing: 0.4rem;
 		animation-name: myAnimationScale;
 		animation-duration: 0.3s;
@@ -43,8 +62,8 @@ body {
 }
 
 .heading-secondary {
-	text-transform: uppercase;
-	font-size: 4rem;
+	text-transform: lowercase;
+	font-size: clamp(2.5rem, 2.3846rem + 0.3205vw, 3rem);
 	font-weight: bolder;
 	background-image: linear-gradient(to right, v.$color-primary-light, v.$color-primary-dark);
 	text-align: center;
@@ -58,18 +77,24 @@ body {
 		transform: scale(1.1) rotateX(15deg);
 		text-shadow: 0.5rem 0.5rem 3rem v.$color-grey-dark;
 	}
+	&::first-letter {
+		text-transform: capitalize;
+	}
 }
 
 .heading-tertiary {
-	text-transform: uppercase;
+	text-transform: lowercase;
 	font-size: v.$font-size-default;
 	letter-spacing: 0.2rem;
 	font-weight: 700;
 	text-align: center;
+	&::first-letter {
+		text-transform: capitalize;
+	}
 }
 
 .paragraph {
-	font-size: v.$font-size-default;
+	font-size: clamp(1.5rem, 1.275rem + 0.625vw, 1.8rem);
 	&:not(:last-child) {
 		margin-bottom: 2.5rem;
 	}

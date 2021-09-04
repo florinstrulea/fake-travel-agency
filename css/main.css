@@ -70,25 +70,25 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #777;
+  box-shadow: 0 1rem 1rem black;
 }
 
 .header-title {
   color: #fff;
   text-transform: uppercase;
   text-align: center;
-  backface-visibility: hidden;
 }
 .header-title--span-1, .header-title--span-2 {
   font-family: "Dancing Script", "cursive";
   font-weight: 700;
-  font-size: 14rem;
+  font-size: clamp(6rem, 4.3846rem + 4.4872vw, 13rem);
   text-transform: capitalize;
   letter-spacing: 2rem;
   display: inline-block;
 }
 .header-title--escapade {
   display: block;
-  font-size: 3rem;
+  font-size: clamp(3rem, 1.3077rem + 1.9231vw, 3rem);
   letter-spacing: 0.4rem;
   animation-name: myAnimationScale;
   animation-duration: 0.3s;
@@ -106,8 +106,8 @@ body {
 }
 
 .heading-secondary {
-  text-transform: uppercase;
-  font-size: 4rem;
+  text-transform: lowercase;
+  font-size: clamp(2.5rem, 2.3846rem + 0.3205vw, 3rem);
   font-weight: bolder;
   background-image: linear-gradient(to right, #0077b6, #020342);
   text-align: center;
@@ -122,17 +122,23 @@ body {
   transform: scale(1.1) rotateX(15deg);
   text-shadow: 0.5rem 0.5rem 3rem #777;
 }
+.heading-secondary::first-letter {
+  text-transform: capitalize;
+}
 
 .heading-tertiary {
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-size: 1.8rem;
   letter-spacing: 0.2rem;
   font-weight: 700;
   text-align: center;
 }
+.heading-tertiary::first-letter {
+  text-transform: capitalize;
+}
 
 .paragraph {
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 1.275rem + 0.625vw, 1.8rem);
 }
 .paragraph:not(:last-child) {
   margin-bottom: 2.5rem;
@@ -215,6 +221,7 @@ body {
   color: #777;
   font-size: 1.5rem;
   font-weight: bold;
+  text-align: center;
 }
 .btn--white::after {
   background-color: #fff;
@@ -281,15 +288,11 @@ body {
   transform: translateY(0.5rem);
   transition: all ease 0.5s;
 }
-.btn-blue__secondary:link, .btn-blue__secondary:visited, .btn-blue__secondary:active {
-  background-color: #0077b6;
-  color: #fff;
-}
 
 .cards__card {
   padding: 4rem 2rem;
-  background-color: #f7f7f7;
-  width: 21%;
+  background-color: rgba(255, 255, 255, 0.8);
+  flex-basis: 24%;
   text-align: center;
 }
 .cards__card:hover {
@@ -301,9 +304,8 @@ body {
 }
 .form-group h2 {
   font-weight: bold;
-  margin: 0;
+  margin: 0 auto;
   font-size: 3rem;
-  margin: 2rem;
 }
 .form-group p {
   font-size: 1.5rem;
@@ -381,20 +383,26 @@ input[type=submit] {
   font-size: 2rem;
   font-weight: 300;
   width: auto;
+  border: 2px solid #0077b6;
 }
 
 .group__photo {
-  width: 100%;
-  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.7);
+  max-width: 95%;
   border-radius: 2rem;
   margin-bottom: 2rem;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.7);
+}
+.group__photo:last-of-type {
+  margin-right: 0rem;
 }
 .group__photo:hover {
   transform: scale(1.2);
   border-radius: 0;
 }
-.group__photo:nth-of-type(2n + 1) {
-  margin-right: 1rem;
+@media screen and (min-width: 1200px) {
+  .group__photo {
+    max-width: 100%;
+  }
 }
 
 .packages {
@@ -404,7 +412,7 @@ input[type=submit] {
 .packages__package {
   width: 31%;
   border-radius: 2rem 2rem 0 0;
-  height: 70rem;
+  min-height: 75rem;
   perspective: 150rem;
   position: relative;
 }
@@ -432,7 +440,7 @@ input[type=submit] {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  font-size: 3.5rem;
+  font-size: 2rem;
   background-color: #fff;
   opacity: 0.85;
   padding: 0.5rem;
@@ -494,39 +502,38 @@ input[type=submit] {
 }
 
 .review {
-  width: 48%;
-  clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+  width: 40%;
   display: flex;
-  justify-content: center;
-  margin: 0 auto;
+  justify-content: space-around;
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.7);
-  padding: 2rem;
+  padding: 1rem;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 .review figure {
-  width: 50%;
+  width: 15%;
 }
 .review figure img {
-  width: 50%;
+  display: inline-block;
+  justify-self: center;
+  width: 100%;
+  background-size: cover;
   border-radius: 2rem;
-  margin-left: 2rem;
 }
 .review__text {
-  margin-left: -10rem;
-  margin-right: 2rem;
-  width: 100%;
+  width: 80%;
   text-align: justify;
 }
 
 video {
   width: 100%;
   background-size: cover;
+  vertical-align: middle;
 }
 
 .header {
-  height: 95vh;
+  min-height: 70vh;
   background-image: linear-gradient(110deg, rgba(0, 119, 182, 0.92) 35%, rgba(2, 3, 66, 0.8) 60%), url("../img/louvre-big.jpg");
   background-size: cover;
   background-position: top;
@@ -536,10 +543,13 @@ video {
   position: absolute;
   top: 4rem;
   left: 4rem;
+  width: 10rem;
 }
 .header__logo {
-  width: 7rem;
+  max-width: 100%;
   border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: white;
 }
 .header__text-container {
   position: absolute;
@@ -550,24 +560,42 @@ video {
 }
 
 .inspiration__container {
-  display: flex;
-  justify-content: space-between;
+  max-width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .inspiration__container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .inspiration__container--photo {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  flex-basis: 48%;
+  justify-content: center;
 }
 .inspiration__container--photo div {
-  flex-basis: 48%;
+  flex-basis: 40%;
+}
+@media screen and (max-width: 600px) {
+  .inspiration__container--photo div {
+    flex-basis: 60%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .inspiration__container--photo {
+    justify-content: space-between;
+    flex-basis: 58%;
+  }
+  .inspiration__container--photo div {
+    flex-basis: 48%;
+  }
 }
 .inspiration__container--text {
   display: flex;
   flex-direction: column;
-  flex-basis: 48%;
+  flex-basis: 40%;
   text-align: justify;
+  margin-bottom: 4rem;
 }
 
 .benefits {
@@ -579,13 +607,13 @@ video {
 .cards {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .reviews {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: space-evenly;
 }
 
 .form-group {
@@ -595,7 +623,7 @@ video {
 }
 
 .inspiration {
-  background-color: #f7f7f7;
+  background-color: #e0e0e0;
   padding-top: 5rem;
   padding-bottom: 20rem;
 }
@@ -611,7 +639,7 @@ video {
 }
 
 .section-packages {
-  background-color: #f7f7f7;
+  background-color: #e0e0e0;
   margin-top: -10vh;
   padding-top: 10rem;
   padding-bottom: 10rem;
@@ -623,20 +651,73 @@ video {
 }
 
 .overlap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   position: absolute;
   top: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 55%, rgba(2, 167, 255, 0.5) 65%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 55%, rgba(224, 224, 224, 0.85) 65%);
 }
 .overlap h2 {
   padding: 5rem 0;
 }
 
 .section-booking {
-  background-color: #f7f7f7;
+  background: #0077b6;
+  background: linear-gradient(5deg, #0077b6 3%, #e0e0e0 24%);
   padding-top: 10rem;
   padding-bottom: 10rem;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+footer img {
+  width: 20rem;
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: white;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.footer-elements ul li {
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+
+.social-container a {
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+  height: 4rem;
+  width: 4rem;
+  background-color: #0077b6;
+  color: #fff;
+  background-color: #fff;
+  color: #0077b6;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

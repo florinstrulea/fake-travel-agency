@@ -2,33 +2,34 @@
 @use "../abstracts/mixins" as m;
 
 .review {
-	width: 48%;
-	clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+	width: 40%;
+	// clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
 	display: flex;
-	justify-content: center;
-	margin: 0 auto;
+	justify-content: space-around;
+
 	background-color: rgba(v.$color-white, 0.6);
 	@include m.box-shadow-default;
-	padding: 2rem;
+	padding: 1rem;
 	font-size: v.$font-size-default;
 	margin-bottom: 1rem;
 
 	& figure {
-		width: 50%;
+		width: 15%;
 		& img {
-			width: 50%;
+			display: inline-block;
+			justify-self: center;
+			width: 100%;
+			background-size: cover;
 			border-radius: 2rem;
-			margin-left: 2rem;
 		}
 	}
 	&__text {
-		margin-left: -10rem;
-		margin-right: 2rem;
-		width: 100%;
+		width: 80%;
 		text-align: justify;
 	}
 }
 video {
 	width: 100%;
 	background-size: cover;
+	vertical-align: middle;
 }

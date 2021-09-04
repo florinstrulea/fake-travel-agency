@@ -2,8 +2,8 @@
 
 .cards__card {
 	padding: 4rem 2rem;
-	background-color: v.$color-grey-light-first;
-	width: 21%;
+	background-color: rgba(v.$color-white, 0.8);
+	flex-basis: 24%;
 	text-align: center;
 	&:hover {
 		transform: scale(1.05) translatex(2rem);
