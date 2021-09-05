@@ -84,7 +84,7 @@ body {
 
 .heading-tertiary {
 	text-transform: lowercase;
-	font-size: v.$font-size-default;
+	font-size: clamp(1.2rem, 0.6rem + 1.6667vw, 2rem);
 	letter-spacing: 0.2rem;
 	font-weight: 700;
 	text-align: center;
@@ -94,7 +94,7 @@ body {
 }
 
 .paragraph {
-	font-size: clamp(1.5rem, 1.275rem + 0.625vw, 1.8rem);
+	font-size: clamp(1rem, 0.4rem + 1.6667vw, 1.8rem);
 	&:not(:last-child) {
 		margin-bottom: 2.5rem;
 	}
@@ -103,6 +103,6 @@ body {
 .far,
 .fas {
 	color: v.$color-primary-light;
-	font-size: 10rem;
+	font-size: clamp(2rem, -2.5rem + 12.5vw, 8rem);
 	margin-bottom: 1rem;
 }

@@ -1,11 +1,21 @@
 @use "../abstracts/variables" as v;
 
 .cards__card {
-	padding: 4rem 2rem;
 	background-color: rgba(v.$color-white, 0.8);
-	flex-basis: 24%;
 	text-align: center;
+	padding: 2rem;
+	flex-basis: 48%;
+	margin-bottom: 2rem;
+
 	&:hover {
 		transform: scale(1.05) translatex(2rem);
+	}
+	@media screen and (max-width: 576px) {
+		flex-basis: 95%;
+		padding: 0.5rem;
+	}
+	@media screen and (min-width: 1400px) {
+		flex-basis: 24%;
+		zoom: 100%;
 	}
 }

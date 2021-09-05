@@ -128,7 +128,7 @@ body {
 
 .heading-tertiary {
   text-transform: lowercase;
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 0.6rem + 1.6667vw, 2rem);
   letter-spacing: 0.2rem;
   font-weight: 700;
   text-align: center;
@@ -138,7 +138,7 @@ body {
 }
 
 .paragraph {
-  font-size: clamp(1.5rem, 1.275rem + 0.625vw, 1.8rem);
+  font-size: clamp(1rem, 0.4rem + 1.6667vw, 1.8rem);
 }
 .paragraph:not(:last-child) {
   margin-bottom: 2.5rem;
@@ -147,7 +147,7 @@ body {
 .far,
 .fas {
   color: #0077b6;
-  font-size: 10rem;
+  font-size: clamp(2rem, -2.5rem + 12.5vw, 8rem);
   margin-bottom: 1rem;
 }
 
@@ -290,13 +290,26 @@ body {
 }
 
 .cards__card {
-  padding: 4rem 2rem;
   background-color: rgba(255, 255, 255, 0.8);
-  flex-basis: 24%;
   text-align: center;
+  padding: 2rem;
+  flex-basis: 48%;
+  margin-bottom: 2rem;
 }
 .cards__card:hover {
   transform: scale(1.05) translatex(2rem);
+}
+@media screen and (max-width: 576px) {
+  .cards__card {
+    flex-basis: 95%;
+    padding: 0.5rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .cards__card {
+    flex-basis: 24%;
+    zoom: 100%;
+  }
 }
 
 .form-group {
@@ -546,7 +559,7 @@ video {
   width: 10rem;
 }
 .header__logo {
-  max-width: 100%;
+  max-width: 75%;
   border-radius: 2rem;
   background-color: rgba(255, 255, 255, 0.7);
   color: white;
@@ -636,6 +649,11 @@ video {
   max-width: 100%;
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
   margin-top: -10vh;
+}
+@media screen and (max-width: 1200px) {
+  .benefits {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
 
 .section-packages {
