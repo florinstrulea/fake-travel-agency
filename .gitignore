@@ -40,4 +40,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-main.css
+css/main.css
+css/main.css.map
