@@ -22,7 +22,27 @@
 		<title>CTB Tours | Tours pour les passionées</title>
 	</head>
 	<body>
+		
 		<header class="header">
+			<div class="navigation">
+				<input type="checkbox" class="navigation__checkbox" id="checkbox">
+	
+				<label for="checkbox" class="navigation__button">
+					<span class="navigation__icon">&nbsp;</span>
+				</label>
+	
+				<div class="navigation__background">&nbsp;</div>
+	
+				<nav class="navigation__nav">
+					<ul class="navigation__list">
+						<li class="navigation__item"><a href="#inspiration" class="navigation__link">Inspiration</a></li>
+						<li class="navigation__item"><a href="#benefits" class="navigation__link">Bénéfices</a></li>
+						<li class="navigation__item"><a href="#packages" class="navigation__link">Nos offres</a></li>
+						<li class="navigation__item"><a href="#reviews" class="navigation__link">Avis</a></li>
+						<li class="navigation__item"><a href="#booking" class="navigation__link">Réservation</a></li>
+						</ul>
+				</nav>
+			</div>
 			<div class="header__logo-container">
 				<img class="header__logo" src="img/logo.png" alt="Logo" />
 			</div>
@@ -38,7 +58,7 @@
 			</div>
 		</header>
 		<main>
-			<section class="inspiration">
+			<section class="inspiration" id="inspiration">
 				<div class="u-text-center">
 					<h2 class="heading-secondary u-margin-bottom-big">
 						inspiration pour votre prochaine aventure
@@ -83,7 +103,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="benefits" id="">
+			<section class="benefits" id="benefits">
 				<div class="container u-margin-side-default">
 					<div class="cards">
 						<div class="cards__card">
@@ -125,7 +145,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section-packages">
+			<section class="section-packages" id="packages">
 				<div class="section-packages__container u-margin-side-default">
 					<h2 class="heading-secondary u-margin-bottom-big">Nos offres</h2>
 					<div class="packages">
@@ -216,7 +236,7 @@
 					<a href="#" class="btn btn-blue u-text-uppercase">Decouvrez plus !</a>
 				</div>
 			</section>
-			<section class="section-reviews">
+			<section class="section-reviews" id="reviews">
 				<div class="video-bg">
 					<video muted autoplay loop>
 						<source src="video/Arc de Triomphe in Paris.mp4" type=video/mp4 />
@@ -269,7 +289,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section-booking">
+			<section class="section-booking" id="booking">
 				<div><h2 class="heading-secondary u-margin-bottom-big">Reservez aujourd'hui</h2></div>
 				<div class="form-group">
 					<div class="form-group__container" id="container">
