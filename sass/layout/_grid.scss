@@ -49,8 +49,9 @@
 }
 .reviews {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 .form-group {
 	@include m.flex-center;

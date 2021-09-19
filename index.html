@@ -16,6 +16,7 @@
 			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 		<script src="https://kit.fontawesome.com/052c7b0e15.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="css/main.css" />
 		<title>CTB Tours | Tours pour les passionées</title>
@@ -216,12 +217,24 @@
 				</div>
 			</section>
 			<section class="section-reviews">
-				<video muted autoplay loop src="video/Arc de Triomphe in Paris.mp4"></video>
+				<div class="video-bg">
+					<video muted autoplay loop>
+						<source src="video/Arc de Triomphe in Paris.mp4" type=video/mp4 />
+					</video>
+				</div>
 				<div class="overlap">
 					<h2 class="heading-secondary">Les avis de nos clients</h2>
 					<div class="reviews">
 						<div class="review">
-							<figure class="review__img"><img src="img/woman1_small.jpg" alt="" /></figure>
+							 <div class="review__img"><img src="img/woman1_small.jpg" alt="" />
+								<div class="stars">
+									<span class="star-yellow">&starf;</span>
+									<span class="star-yellow">&starf;</span>
+									<span class="star-yellow">&starf;</span>
+									<span class="star-yellow">&starf;</span>
+									<span class="star-yellow">&starf;</span>
+								</div>
+							</div> 
 							<div class="review__text">
 								<h3 class="heading-tertiary u-margin-bottom-small">Lorem ipsum dolor sit amet</h3>
 								<p class="paragraph">
@@ -233,7 +246,13 @@
 							</div>
 						</div>
 						<div class="review">
-							<figure class="review__img"><img src="img/man1_small.jpg" alt="" /></figure>
+							<div class="review__img"><img src="img/man1_small.jpg" alt="" /><div class="stars">
+								<span class="star-yellow">&starf;</span>
+								<span class="star-yellow">&starf;</span>
+								<span class="star-yellow">&starf;</span>
+								<span class="star-yellow">&starf;</span>
+								<span class="star-yellow">&starf;</span>
+							</div></div>
 							<div class="review__text">
 								<h3 class="heading-tertiary u-margin-bottom-small">Lorem ipsum dolor sit elit.</h3>
 								<p class="paragraph">
@@ -244,33 +263,9 @@
 								<p class="paragraph">Olivier, 35ans</p>
 							</div>
 						</div>
-						<div class="review">
-							<figure class="review__img"><img src="img/woman2_small.jpg" alt="" /></figure>
-							<div class="review__text">
-								<h3 class="heading-tertiary u-margin-bottom-small">Lorem ipsum dolor sit amet</h3>
-								<p class="paragraph">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio dicta,
-									perspiciatis aut dignissimos itaque deleniti, voluptatum deserunt odio molestiae
-									doloremque eaque quam qui veniam pariatur explicabo facilis. Cumque, unde?
-								</p>
-								<p class="paragraph">Marie, 25ans</p>
-							</div>
-						</div>
-						<div class="review">
-							<figure class="review__img"><img src="img/man2_small.jpg" alt="" /></figure>
-							<div class="review__text">
-								<h3 class="heading-tertiary u-margin-bottom-small">Lorem ipsum dolor sit amet</h3>
-								<p class="paragraph">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio dicta,
-									perspiciatis aut dignissimos itaque deleniti, voluptatum deserunt odio molestiae
-									doloremque eaque quam qui veniam pariatur explicabo facilis. Cumque, unde?
-								</p>
-								<p class="paragraph">Christophe, 32ans</p>
-							</div>
-						</div>
-					</div>
+					
 					<div class="u-text-center">
-						<a href="#" class="btn btn-blue u-margin-top-big u-text-uppercase">Decouvrez plus !</a>
+						<a href="#" class="btn btn-blue u-margin-top-medium u-text-uppercase">Decouvrez plus !</a>
 					</div>
 				</div>
 			</section>
@@ -322,20 +317,20 @@
 			<div class="footer-elements">
 				<div class="footer-element">
 					<ul>
-						<a href="#"><li class="uppercase li-footer">home</li></a>
-						<a href="#"><li class="uppercase li-footer">reservation</li></a>
+						<a href="#"><li class="text-uppercase li-footer">home</li></a>
+						<a href="#"><li class="text-uppercase li-footer">reservation</li></a>
 					</ul>
 				</div>
 				<div class="footer-element">
 					<ul>
-						<a href="#"><li class="uppercase li-footer">faq</li></a>
-						<a href="#"><li class="uppercase li-footer">mentions legalés</li></a>
-						<a href="#"><li class="uppercase li-footer">politique de confidentialité</li></a>
-						<a href="#"><li class="uppercase li-footer">politique de cookies</li></a>
+						<a href="#"><li class="text-uppercase li-footer">faq</li></a>
+						<a href="#"><li class="text-uppercase li-footer">mentions legalés</li></a>
+						<a href="#"><li class="text-uppercase li-footer">politique de confidentialité</li></a>
+						<a href="#"><li class="text-uppercase li-footer">politique de cookies</li></a>
 					</ul>
 				</div>
 				<div class="footer-social">
-					<p class="u-text-uppercase">Retrouvez nous sur:</p>
+					<p class="u-text-uppercase li-footer">Retrouvez nous sur:</p>
 					<div class="social-container">
 						<a href="#"
 							><span class="social-icon"><i class="fab fa-facebook-f"></i></span

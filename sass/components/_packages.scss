@@ -24,7 +24,7 @@
 	justify-content: space-between;
 
 	&__package {
-		width: 31%;
+		width: 32%;
 		border-radius: 2rem 2rem 0 0;
 		min-height: 75rem;
 		perspective: 150rem;
@@ -38,7 +38,7 @@
 				text-align: center;
 				font-weight: bold;
 				padding: 2rem;
-				font-size: 2rem;
+				font-size: clamp(0.8rem, 0.05rem + 2.0833vw, 1.8rem);
 				color: v.$color-primary-dark;
 			}
 		}
@@ -54,7 +54,7 @@
 			position: absolute;
 			bottom: 1rem;
 			left: 1rem;
-			font-size: 2rem;
+			font-size: clamp(0.5rem, -0.625rem + 3.125vw, 2rem);
 			background-color: v.$color-white;
 			opacity: 0.85;
 			padding: 0.5rem;
@@ -84,7 +84,7 @@
 			backface-visibility: hidden;
 			@include m.flex-center-column;
 			&--price {
-				font-size: 10rem;
+				font-size: clamp(2rem, -4rem + 16.6667vw, 10rem);
 				font-weight: 200;
 				color: v.$color-primary-dark;
 				margin: 10rem 0;

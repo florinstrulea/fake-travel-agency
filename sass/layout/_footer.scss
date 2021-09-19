@@ -8,7 +8,12 @@ footer {
 	padding-top: 2rem;
 	& a {
 		text-decoration: none;
+		text-transform: uppercase;
 		color: v.$color-white;
+		margin-bottom: 5rem;
+	}
+	.li-footer {
+		margin: 5rem 0;
 	}
 
 	& img {
@@ -18,9 +23,17 @@ footer {
 	}
 }
 
+.footer-element {
+	margin: 0 5rem;
+}
 .footer-elements {
-	@include m.flex-center;
-	flex-direction: row;
+	@media screen and (min-width: 768px) {
+		@include m.flex-center;
+		justify-content: center;
+	}
+
+	margin: 0 auto;
+	text-align: center;
 	align-items: flex-start;
 	justify-content: space-evenly;
 	& ul li {

@@ -35,8 +35,7 @@
 	transition: all ease 0.5s;
 }
 @mixin padding-vertical {
-	padding-top: 10rem;
-	padding-bottom: 10rem;
+	padding: 10rem 0;
 }
 @mixin social {
 	border: 1px solid #dddddd;

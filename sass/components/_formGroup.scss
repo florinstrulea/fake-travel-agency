@@ -2,7 +2,8 @@
 @use "../abstracts/mixins" as m;
 
 .form-group {
-	flex-direction: row;
+	display: flex;
+	// flex-direction: row;
 
 	& h2 {
 		font-weight: bold;
@@ -49,7 +50,10 @@
 		width: 100%;
 	}
 	&__container {
-		@include m.flex-center;
+		@media screen and (min-width: 700px) {
+			@include m.flex-center;
+		}
+
 		align-items: flex-start;
 		background-color: #fff;
 		border-radius: 10px;
