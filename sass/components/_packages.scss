@@ -1,116 +1,216 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 
-// @media screen and (min-width: 600px) {
-// 	.packages {
-// 		zoom: 0.6;
-// 	}
-// }
+.card {
+	// FUNCTIONALITY
+	perspective: 150rem;
+	position: relative;
+	height: 52rem;
+	margin: 3rem;
+	border-radius: 20px;
+	&__side {
+		height: 52rem;
+		transition: all 0.8s ease;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		border-radius: 20px;
+		overflow: hidden;
+		box-shadow: 0 1.5rem 4rem rgba(v.$color-black, 0.15);
 
-// @media screen and (min-width: 800px) {
-// 	.packages {
-// 		zoom: 0.8;
-// 	}
-// }
-
-// @media only screen and (min-width: 1000px) {
-// 	.packages {
-// 		zoom: 1;
-// 	}
-// }
-
-.packages {
-	display: flex;
-	justify-content: space-between;
-
-	&__package {
-		width: 32%;
-		border-radius: 2rem 2rem 0 0;
-		min-height: 75rem;
-		perspective: 150rem;
-		position: relative;
-
-		&--div {
-			background-color: rgba(v.$color-primary-light, 0.15);
-			border-radius: 2rem 2rem 0 0;
-			margin: 3rem 0;
-			& .paragraph {
-				text-align: center;
-				font-weight: bold;
-				padding: 2rem;
-				font-size: clamp(0.8rem, 0.05rem + 2.0833vw, 1.8rem);
-				color: v.$color-primary-dark;
-			}
-		}
-		&--figure img {
-			width: 100%;
-			background-size: cover;
-			border-radius: 2rem 2rem 0 0;
-		}
-		&--figure {
-			position: relative;
-		}
-		&--figure figcaption {
-			position: absolute;
-			bottom: 1rem;
-			left: 1rem;
-			font-size: clamp(0.5rem, -0.625rem + 3.125vw, 2rem);
+		&--front {
 			background-color: v.$color-white;
-			opacity: 0.85;
-			padding: 0.5rem;
-			color: v.$color-primary-dark;
 		}
-		&-front {
-			background-color: v.$color-white;
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 100%;
-			border-radius: 2rem 2rem 0 0;
-			transform: rotateY(0);
-			transition: all ease-out 1s;
-			backface-visibility: hidden;
-		}
-		&-back {
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 100%;
-			border-radius: 2rem 2rem 0 0;
+
+		&--back {
 			transform: rotateY(180deg);
-			transition: all ease-out 1s;
-			backface-visibility: hidden;
-			@include m.flex-center-column;
-			&--price {
-				font-size: clamp(2rem, -4rem + 16.6667vw, 10rem);
-				font-weight: 200;
-				color: v.$color-primary-dark;
-				margin: 10rem 0;
+
+			&-1 {
+				background-color: v.$color-secondary;
 			}
-			&--only {
-				font-size: 2rem;
-				color: v.$color-grey-dark;
+
+			&-2 {
+				background-color: v.$color-quarternary;
 			}
-			&--first {
-				background-color: rgba(v.$color-secondary, 0.4);
+
+			&-3 {
+				background-color: v.$color-tertiary;
 			}
-			&--second {
-				background-color: rgba(v.$color-tertiary, 0.4);
+		}
+	}
+
+	&:hover &__side--front {
+		transform: rotateY(-180deg);
+	}
+
+	&:hover &__side--back {
+		transform: rotateY(0);
+	}
+
+	// FRONT SIDE STYLING
+	&__picture {
+		background-size: cover;
+		height: 23rem;
+		background-blend-mode: screen;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+
+		&--1 {
+			background-image: url("../../img/grenoble.jpg");
+		}
+
+		&--2 {
+			background-image: url("../../img/madrid.jpg");
+		}
+
+		&--3 {
+			background-image: url("../../img/restaurant.jpg");
+		}
+	}
+
+	&__heading {
+		font-size: 1.8rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-align: right;
+		color: v.$color-white;
+		position: absolute;
+		top: 12rem;
+		right: 2rem;
+		width: 75%;
+	}
+
+	&__heading-span {
+		padding: 1rem;
+
+		&--1 {
+			background-image: linear-gradient(
+				to bottom,
+				rgba(v.$color-primary-light, 0.85),
+				rgba(v.$color-primary-dark, 0.85)
+			);
+		}
+
+		&--2 {
+			background-image: linear-gradient(
+				to bottom,
+				rgba(v.$color-primary-light, 0.85),
+				rgba(v.$color-primary-dark, 0.85)
+			);
+		}
+
+		&--3 {
+			background-image: linear-gradient(
+				to bottom,
+				rgba(v.$color-primary-light, 0.85),
+				rgba(v.$color-primary-dark, 0.85)
+			);
+		}
+	}
+
+	&__details {
+		padding: 3rem;
+
+		ul {
+			list-style: none;
+			width: 80%;
+			margin: 0 auto;
+
+			li {
+				text-align: center;
+				font-size: 1.5rem;
+				padding: 1rem;
+				color: v.$color-primary;
+				font-weight: bold;
 			}
-			&--third {
-				background-color: rgba(v.$color-quarternary, 0.4);
+		}
+	}
+
+	// FRONT SIDE STYLING
+	&__small {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+		text-align: center;
+	}
+
+	&__price-box {
+		text-align: center;
+		color: v.$color-white;
+		margin-bottom: 8rem;
+	}
+
+	&__price-only {
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		color: v.$color-black;
+	}
+
+	&__price-value {
+		font-size: 6rem;
+		font-weight: 300;
+		color: v.$color-black;
+	}
+
+	//@include respond(tab-port) {
+	@media only screen and (max-width: 1000px), only screen and (hover: none) {
+		height: auto;
+		border-radius: 3px;
+		background-color: v.$color-white;
+		box-shadow: 0 1.5rem 4rem rgba(v.$color-black, 0.15);
+
+		&__side {
+			height: auto;
+			position: relative;
+			box-shadow: none;
+
+			&--back {
+				transform: rotateY(0);
+				clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
 			}
 		}
 
-		&:hover &-front {
-			transform: rotateY(-180deg);
-			transition: all ease-out 1s;
-		}
-		&:hover &-back {
+		&:hover &__side--front {
 			transform: rotateY(0);
-			transition: all ease-out 1s;
 		}
+
+		&__details {
+			padding: 1rem 3rem;
+		}
+
+		// FRONT SIDE STYLING
+		&__small {
+			position: relative;
+			top: 0%;
+			left: 0;
+			transform: translate(0);
+			width: 100%;
+			padding: 7rem 4rem 4rem 4rem;
+		}
+
+		&__price-box {
+			margin-bottom: 3rem;
+		}
+
+		&__price-value {
+			font-size: 4rem;
+			color: v.$color-black;
+			font-weight: 300;
+		}
+	}
+}
+@media screen and (min-width: 1200px) {
+	.section-packages__container {
+		display: flex;
+	}
+	.card {
+		width: 38%;
 	}
 }
